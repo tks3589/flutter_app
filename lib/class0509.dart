@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'page/game_page.dart';
+import 'page/notification_page.dart';
 
 void main() => runApp(TTT());
 
@@ -11,7 +12,8 @@ class TTT extends StatelessWidget{
         theme: ThemeData(
           primarySwatch: Colors.blue,
         ),
-        home: Tester()
+        //home: Tester()
+        home: NotificationPage()
     );
   }
 }
