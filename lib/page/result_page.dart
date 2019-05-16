@@ -8,7 +8,7 @@ class ResultPage extends MaterialPageRoute{
 }
 
 class NewPage extends StatefulWidget{
-  
+
   final int result;
   const NewPage(this.result);
 
