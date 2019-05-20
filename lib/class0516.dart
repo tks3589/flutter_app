@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'page/async_page.dart';
+import 'page/http_page.dart';
 
 void main() => runApp(TTT());
 
@@ -12,7 +13,8 @@ class TTT extends StatelessWidget{
           primarySwatch: Colors.blue,
         ),
         //home: Tester()
-        home: AsyncPage()
+        //home: AsyncPage()
+        home: HttpPage()
     );
   }
 }

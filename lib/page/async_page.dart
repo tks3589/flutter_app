@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
@@ -17,6 +19,10 @@ class _AsyncPageState extends State<AsyncPage> {
     super.initState();
     //funcA();
     initData();
+
+    /*funcB();
+    funcC();
+    funcD();*/
   }
    initData() async{
        sf = await SharedPreferences.getInstance();
@@ -27,12 +33,32 @@ class _AsyncPageState extends State<AsyncPage> {
        });
 
   }
+  void funcB() async{
+    sleep(Duration(seconds: 3));
+    print('B ${DateTime.now()}');
+  }
+  void funcC() async{
+    sleep(Duration(seconds: 3));
+    print('C ${DateTime.now()}');
+  }
+  void funcD() async{
+    sleep(Duration(seconds: 3));
+    print('D ${DateTime.now()}');
+  }
 
   Future<String> getData() async{
+    sleep(Duration(seconds: 1));
     return "ABC";
   }
   void funcA() async{
+    print('${DateTime.now()}');
+    String str = await getData();
+    Future<String> futureStr = getData();
 
+    print('$str ${DateTime.now()}');
+    futureStr.then((String value){
+      print('$value ${DateTime.now()}');
+    });
   }
 
   @override
